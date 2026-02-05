@@ -5,59 +5,51 @@
         .wf-force-outline-none[tabindex="-1"]:focus {
             outline: none;
 
-            @media (max-width: 768px) {
-                  html, body {
-                overflow-x: hidden;
-            }
+@media (max-width: 768px) {
 
-            .image-project {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                transform: none !important;
-            }
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
 
-            .block-image-project {
-                width: 100%;
-            }
+  .w-layout-grid {
+    display: block !important;
+  }
 
-            .image-hero {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-            }
+  [style*="transform"] {
+    transform: none !important;
+  }
 
-            .grid-hero,
-            .grid-hero---row-1,
-            .grid-hero---row-2,
-            .grid-hero---row-3 {
-                width: 100%;
-                max-width: 100%;
-                transform: none !important;
-            }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 
-            .section-banner {
-                overflow: hidden;
-            }
+  .block-image,
+  .block-image-project,
+  .grid-banner-image,
+  .image-project,
+  .image-banner,
+  .image-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 
-            .grid-banner,
-            .grid-banner-image,
-            .grid-banner---row-1,
-            .grid-banner---row-2,
-            .grid-banner---row-3 {
-                width: 100%;
-                max-width: 100%;
-                transform: none !important;
-            }
+  .block-right,
+  .content,
+  .section,
+  .section-banner {
+    position: relative !important;
+  }
 
-            .image-banner {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                object-fit: cover;
-            }
-            }
-        }
+  .block-image,
+  .block-right {
+    margin-bottom: 24px;
+  }
+}
+
 
     </style>
     <meta charset="utf-8">
