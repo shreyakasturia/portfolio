@@ -6,49 +6,74 @@
             outline: none;
         }
 
-        /* Mobile Responsiveness Fixes */
+        /* Mobile Responsiveness Fixes - Matching Reference Site */
 
-/* Fix for project images vertical alignment on mobile */
+/* Fix for all screen sizes - ensure proper containment */
+.section {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Mobile-specific fixes */
 @media screen and (max-width: 767px) {
-  /* Ensure collection items stack properly */
+  /* Reset transforms that cause positioning issues on mobile */
+  .link-block-image-project {
+    transform: none !important;
+    will-change: auto !important;
+  }
+  
+  /* Ensure proper stacking of project items */
   .collection-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
-    gap: 1.5rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    position: relative;
   }
   
-  /* Fix project image container */
+  /* Fix image container */
   .block-image-project {
     width: 100%;
-    margin-bottom: 1.5rem;
+    height: auto;
+    margin-bottom: 1rem;
+    overflow: hidden;
   }
   
+  /* Ensure images are responsive */
   .image-project {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
   }
   
-  /* Ensure project text doesn't overlap */
+  /* Fix text block spacing */
   .block-text-project {
     width: 100%;
-    padding: 0 1rem;
-    margin-top: 1rem;
+    padding: 0;
+    margin-top: 0;
   }
   
-  /* Fix spacing between projects */
-  .collection-list {
+  /* Add consistent spacing between projects */
+  .collection-list.w-dyn-items {
     display: flex;
     flex-direction: column;
     gap: 3rem;
   }
   
-  /* Prevent "Design that's interactive" section from overlapping */
+  /* Create buffer space before banner section */
+  #Project.section {
+    padding-bottom: 5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Prevent banner overlap */
   .section-banner {
-    margin-top: 4rem;
-    padding-top: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
     clear: both;
+    position: relative;
+    z-index: 1;
   }
   
   /* Fix banner grid on mobile */
@@ -59,33 +84,34 @@
   }
   
   .block-banner-text {
-    padding: 2rem 1rem;
-    z-index: 10;
+    padding: 1.5rem 1rem;
+    order: 1;
   }
   
   .block-banner-image {
+    order: 2;
     margin-top: 2rem;
   }
   
-  /* Ensure project section has proper spacing */
+  /* Adjust heading size on mobile */
+  .heading-banner {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .collection-item {
+    margin-bottom: 4rem;
+  }
+  
   #Project.section {
     padding-bottom: 4rem;
   }
   
-  /* Fix any transform issues on mobile */
-  .link-block-image-project {
-    transform: none !important;
-  }
-}
-
-/* Additional tablet fixes */
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .collection-item {
-    margin-bottom: 3rem;
-  }
-  
   .section-banner {
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
 }
     </style>
