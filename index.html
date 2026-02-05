@@ -6,47 +6,66 @@
             outline: none;
 
 @media (max-width: 768px) {
-
-  html,
   body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-  }
-
-  .w-layout-grid {
-    display: block !important;
-  }
-
-  [style*="transform"] {
-    transform: none !important;
+    overflow-x: hidden;
   }
 
   img {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto;
   }
 
-  .block-image,
-  .block-image-project,
-  .grid-banner-image,
+  .image-hero,
   .image-project,
-  .image-banner,
-  .image-hero {
-    width: 100% !important;
-    max-width: 100% !important;
+  .image-banner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: none !important;
   }
 
-  .block-right,
-  .content,
-  .section,
+  .grid-hero,
+  .grid-hero---row-1,
+  .grid-hero---row-2,
+  .grid-hero---row-3 {
+    transform: none !important;
+  }
+
+  .collection-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .block-image-project {
+    width: 100%;
+  }
+
+  .block-text-project {
+    padding: 0 16px;
+  }
+
   .section-banner {
-    position: relative !important;
+    overflow: hidden;
   }
 
-  .block-image,
-  .block-right {
-    margin-bottom: 24px;
+  .grid-banner,
+  .grid-banner-image,
+  .grid-banner---row-1,
+  .grid-banner---row-2,
+  .grid-banner---row-3 {
+    transform: none !important;
+  }
+
+  .heading-banner {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .button {
+    align-self: center;
   }
 }
 
