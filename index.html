@@ -6,10 +6,88 @@
             outline: none;
         }
 
-        .Project-image-main {
-            width: 100%;
-            height: auto;
-        }
+        /* Mobile Responsiveness Fixes */
+
+/* Fix for project images vertical alignment on mobile */
+@media screen and (max-width: 767px) {
+  /* Ensure collection items stack properly */
+  .collection-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    gap: 1.5rem;
+  }
+  
+  /* Fix project image container */
+  .block-image-project {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .image-project {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Ensure project text doesn't overlap */
+  .block-text-project {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Fix spacing between projects */
+  .collection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  /* Prevent "Design that's interactive" section from overlapping */
+  .section-banner {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    clear: both;
+  }
+  
+  /* Fix banner grid on mobile */
+  .grid-banner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .block-banner-text {
+    padding: 2rem 1rem;
+    z-index: 10;
+  }
+  
+  .block-banner-image {
+    margin-top: 2rem;
+  }
+  
+  /* Ensure project section has proper spacing */
+  #Project.section {
+    padding-bottom: 4rem;
+  }
+  
+  /* Fix any transform issues on mobile */
+  .link-block-image-project {
+    transform: none !important;
+  }
+}
+
+/* Additional tablet fixes */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .collection-item {
+    margin-bottom: 3rem;
+  }
+  
+  .section-banner {
+    margin-top: 3rem;
+  }
+}
     </style>
     <meta charset="utf-8">
     <title>Shreya Kasturia</title>
@@ -43,7 +121,6 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
-
 <link href="https://cdn.prod.website-files.com/63f44686a6a1ca83742cf1ea/6507d9e184e0f179bbcfcf7c_FavIconUpdate.png" rel="shortcut icon" type="image/x-icon">    <link href="" rel="apple-touch-icon">
 <link href="https://cdn.prod.website-files.com/63f44686a6a1ca83742cf1ea/6507d8d19323df393eafbb4d_Webclip.png" rel="apple-touch-icon">    <meta name="google-site-verification" content="Sa_pjoCQuoxc0n9ngI483etxaQRE0Oggyfcy-eLFITo">
 </head>
@@ -189,7 +266,7 @@
                     <div data-w-id="45ed8014-9a7d-1961-8731-d4e48852d02e" style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" role="listitem"
                         class="collection-item w-dyn-item">
                         <a id="Project-Image-Link" data-w-id="dfda4252-6477-9c5d-7ec5-a305cdaeeac8" href="https://virtualtherapist.netlify.app/" class="link-block-image-project w-inline-block" style="will-change: transform; transform: translate3d(0px, 2vw, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(2deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                            <div class="block-image-project" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img id="Project-image-main" src="assets/vt.webp" alt="Virtual Therapist" class="image-project" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></div>
+                            <div class="block-image-project" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img id="Project-image-main" src="assets/vt.png" alt="Virtual Therapist" class="image-project" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></div>
                         </a>
                         <div class="block-text-project">
                             <div class="project-info">html, js, css, python</div><a href="https://virtualtherapist.netlify.app/" class="link-heading-project w-inline-block"><h3 class="heading-project">Virtual Therapist</h3></a>
